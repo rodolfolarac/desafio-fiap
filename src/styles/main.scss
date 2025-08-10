@@ -1,0 +1,25 @@
+@use "./functions" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: vw(16);
+}
+
+body {
+  background: #000;
+  color: #333;
+  line-height: 1.5;
+  font-family: "Gotham HTF", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 vw(16);
+  max-width: vw(1200);
+}
+

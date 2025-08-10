@@ -1,0 +1,138 @@
+@use "../../../styles/functions" as *;
+
+.home__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  max-width: 100%;
+  min-height: 100vh;
+  color: white;
+
+  @media (max-width: 1024px) {
+    padding-top: 0px;
+    min-height: 100vh;
+  }
+
+  @media (max-width: 450px) {
+    padding: 50px 0;
+    min-height: 70vh;
+  }
+}
+
+.home__hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: vw(1200);
+
+  @media (max-width: 450px) {
+    max-width: 100%;
+  }
+}
+
+.home__hero-title {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.home__hero-title--main-title {
+  display: block;
+  position: relative;
+  opacity: 0;
+  z-index: 1;
+  animation: fadeIn 1s ease-out 1.2s forwards;
+  color: #75787a;
+  font-weight: 900;
+  font-size: vw(350);
+  line-height: vw(259);
+  font-family: "Gotham HTF", sans-serif;
+  letter-spacing: -0.01em;
+
+  @media (max-width: 450px) {
+    margin-right: 25px;
+    font-size: 150px;
+    line-height: 1;
+    hyphens: auto;
+    text-align: right;
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+  @media (max-width: 333px) {
+    font-size: 120px;
+  }
+}
+
+.home__hero-title--subtitle-primary {
+  position: absolute;
+  top: vw(-50);
+  left: 50%;
+  transform: translate(-50%, -100px);
+  opacity: 0;
+  z-index: 10;
+  animation: slideDownMain 0.8s ease-out 0.2s forwards;
+  color: white;
+  font-weight: 400;
+  font-size: vw(110);
+  line-height: vw(77);
+  letter-spacing: -0.05em;
+  text-align: center;
+  white-space: nowrap;
+
+  @media (max-width: 450px) {
+    top: 36%;
+    left: 47%;
+    font-size: 36px;
+  }
+  @media (max-width: 333px) {
+    top: 42%;
+    font-size: 30px;
+  }
+}
+
+.home__hero-title--subtitle-secondary {
+  position: absolute;
+  top: vw(47);
+  left: vw(52);
+  transform: translateY(-100px);
+  opacity: 0;
+  z-index: 10;
+  animation: slideDownHighlight 0.8s ease-out 0.6s forwards;
+  color: white;
+  font-weight: 400;
+  font-size: vw(110);
+  line-height: vw(77);
+  letter-spacing: -0.05em;
+
+  @media (max-width: 450px) {
+    top: 48%;
+    left: 7%;
+    font-size: 36px;
+  }
+  @media (max-width: 333px) {
+    top: 54%;
+    font-size: 30px;
+  }
+}
+
+@keyframes slideDownMain {
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownHighlight {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 0.3;
+  }
+}
