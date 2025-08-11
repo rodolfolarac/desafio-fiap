@@ -1,3 +1,5 @@
+-> Landing Page foi desenvolvida também com um foco em Page Speed, SEO, Acessibilidade e Boas práticas de Rankeamento do google.
+
 ->Foram alterados locais onde o font-weight não fica visualmente similar ao figma mesmo possuindo as mesmas propriedades como por exemplo:
 home**hero-title--subtitle-primary figma esta 500 utilizei 400 pois ficou mais próximo do figma(testes realizados em 1920)
 home**hero-title--subtitle-secondary esta 500 utilizei 400 pois ficou mais pr?ximo do figma(testes realizados em 1920)
